@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("hero-bg copy.jpg");
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff; /* Set the default text color to white for better contrast */
+    position: relative; /* Add relative positioning to the body */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("hero-bg copy.jpg"); /* Use the same background image for the overlay */
+    background-size: cover;
+    
+    opacity: 0.1; /* Adjust the opacity here (0.5 for 50% opacity) */
+    z-index: -1; /* Place the overlay below the container */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background to the container */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: left; /* Align text to the left inside the container */
+    max-width: 800px;
+    color: black;
+}
+
+/* The rest of your CSS styles remain the same */
+
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Set the title color to a contrasting color */
+}
+
+.question {
+    font-size: 30px;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background: wheat;
+}
+
+.option {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    color: rgb(102, 2, 2); /* Change the                                    text color for the options (dark gray) */
+}
+
+
+.option input[type="radio"] {
+    margin-right: 10px;
+    color: #da0e0e;
+}
+
+.submit-button {
+    border-radius: 19px;
+    background:crimson;
+    color: #0f0b0b;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: #008000;
+    font-weight: bold;
+    margin-top: 10px;
+}

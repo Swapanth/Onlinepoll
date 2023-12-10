@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Faculty login</title>
+    <link href="design.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title signup">Faculty Login</div>
+     
+        
+      </div>
+      <span style="width: 20px;"> <p>Only Faculty can Create the poll</p></span> 
+     
+      <div class="form-container">
+       
+        </div>
+        <div class="form-inner">
+          <form action="facultylogin.php" method="post" class="login">
+            <div class="field">
+              <input type="text" placeholder="Faculty ID" name="faculty_ID" required>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="password" name="password" required>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Classroom ID" name="classroom_id" required>
+            </div>
+            
+            
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">Back to <a href="index.html">Home</a></div>
+         
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+    </script>
+
+  </body>
+</html>
